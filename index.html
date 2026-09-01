@@ -1,301 +1,610 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>املاک دانش | قائم‌شهر</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
+    <title>املاک دانش | خرید، فروش، رهن و اجاره</title>
 
-body{
-    font-family:Tahoma,Arial,sans-serif;
-    background:#f5f2ea;
-    color:#222;
-    line-height:1.9;
-}
+    <meta name="description" content="املاک دانش قائم‌شهر - خرید و فروش، رهن و اجاره، مشارکت در ساخت، کارشناسی و مشاوره املاک">
 
-.container{
-    max-width:680px;
-    margin:auto;
-    padding-bottom:35px;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.header{
-    background:linear-gradient(145deg,#101010,#292929);
-    color:white;
-    text-align:center;
-    padding:38px 20px 65px;
-    border-radius:0 0 35px 35px;
-}
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #0d0d0d;
+            color: #ffffff;
+            line-height: 1.9;
+        }
 
-.logo{
-    width:120px;
-    height:120px;
-    object-fit:contain;
-    border-radius:20px;
-    margin-bottom:15px;
-    background:white;
-    padding:8px;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-.header h1{
-    font-size:31px;
-    color:#d1ad67;
-}
+        .container {
+            width: 92%;
+            max-width: 900px;
+            margin: auto;
+        }
 
-.header p{
-    color:#ddd;
-    margin-top:5px;
-}
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 35px 15px 30px;
+            background: linear-gradient(180deg, #171717, #0d0d0d);
+            border-bottom: 1px solid #b9974b;
+        }
 
-.quote{
-    background:white;
-    margin:-28px 18px 18px;
-    padding:22px;
-    border-radius:22px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
+        .logo {
+            width: 170px;
+            max-width: 70%;
+            height: auto;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+        }
 
-.quote strong{
-    color:#654b24;
-    font-size:17px;
-}
+        h1 {
+            color: #d4af37;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
 
-.section{
-    background:white;
-    margin:15px 18px;
-    padding:22px;
-    border-radius:22px;
-    box-shadow:0 6px 20px rgba(0,0,0,.05);
-}
+        .subtitle {
+            color: #ddd;
+            font-size: 16px;
+        }
 
-.title{
-    font-size:19px;
-    margin-bottom:16px;
-}
+        .slogan {
+            margin-top: 18px;
+            color: #d4af37;
+            font-size: 15px;
+        }
 
-.services{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-}
+        /* SECTIONS */
+        section {
+            padding: 30px 0;
+        }
 
-.service{
-    background:#faf8f2;
-    border:1px solid #eadfc9;
-    border-radius:15px;
-    padding:13px 8px;
-    text-align:center;
-}
+        .section-title {
+            text-align: center;
+            color: #d4af37;
+            font-size: 23px;
+            margin-bottom: 22px;
+        }
 
-.contact{
-    display:flex;
-    justify-content:space-between;
-    padding:12px 0;
-    border-bottom:1px solid #eee;
-}
+        /* ABOUT */
+        .about {
+            text-align: center;
+            background: #121212;
+            border-radius: 15px;
+            padding: 25px 20px;
+            border: 1px solid #292929;
+        }
 
-.contact a{
-    color:#a27632;
-    text-decoration:none;
-    font-weight:bold;
-    direction:ltr;
-}
+        .about p {
+            color: #ddd;
+            font-size: 15px;
+        }
 
-.buttons{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-    margin-top:16px;
-}
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
 
-.btn{
-    display:block;
-    text-align:center;
-    text-decoration:none;
-    padding:13px 8px;
-    border-radius:14px;
-    background:#171717;
-    color:white;
-    font-weight:bold;
-    font-size:14px;
-}
+        .service {
+            background: #171717;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 17px 10px;
+            text-align: center;
+            color: #eee;
+            transition: 0.2s;
+        }
 
-.gold{
-    background:#b28a48;
-}
+        .service:hover {
+            border-color: #d4af37;
+            transform: translateY(-2px);
+        }
 
-.address{
-    color:#555;
-    margin-bottom:15px;
-}
+        .service-icon {
+            font-size: 27px;
+            display: block;
+            margin-bottom: 5px;
+        }
 
-.hours{
-    display:flex;
-    justify-content:space-between;
-    padding:9px 0;
-    border-bottom:1px solid #eee;
-}
+        /* CONTACT */
+        .contact-box {
+            background: #151515;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 22px 18px;
+        }
 
-.instagram{
-    text-align:center;
-}
+        .person {
+            padding: 18px 0;
+            border-bottom: 1px solid #303030;
+        }
 
-.instagram a{
-    color:#a27632;
-    font-size:18px;
-    font-weight:bold;
-    text-decoration:none;
-}
+        .person:last-child {
+            border-bottom: none;
+        }
 
-.footer{
-    text-align:center;
-    color:#777;
-    font-size:12px;
-    padding:10px 25px;
-}
+        .person-name {
+            color: #d4af37;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-@media(max-width:450px){
-    .services,.buttons{
-        grid-template-columns:1fr;
-    }
+        .phone {
+            direction: ltr;
+            text-align: center;
+            font-size: 19px;
+            margin-bottom: 12px;
+            color: #fff;
+        }
 
-    .header h1{
-        font-size:27px;
-    }
-}
-</style>
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 9px 18px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 120px;
+            transition: 0.2s;
+        }
+
+        .call-btn {
+            background: #d4af37;
+            color: #111;
+        }
+
+        .call-btn:hover {
+            background: #f0cc5b;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+        }
+
+        /* ADDRESS */
+        .info-box {
+            background: #151515;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 22px 18px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .info-title {
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .info-text {
+            color: #ddd;
+            font-size: 15px;
+        }
+
+        .map-btn {
+            display: inline-block;
+            margin-top: 15px;
+            background: #d4af37;
+            color: #111;
+            padding: 10px 22px;
+            border-radius: 9px;
+            font-weight: bold;
+        }
+
+        .map-btn:hover {
+            background: #f0cc5b;
+        }
+
+        /* INSTAGRAM */
+        .instagram-box {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            color: #fff;
+            background: #171717;
+            border: 1px solid #444;
+            padding: 11px 22px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        .instagram-link:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+
+        .instagram-icon {
+            width: 23px;
+            height: 23px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        /* HOURS */
+        .hours {
+            text-align: center;
+            color: #ddd;
+            background: #151515;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .hours strong {
+            color: #d4af37;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            padding: 25px 15px;
+            border-top: 1px solid #333;
+            color: #999;
+            font-size: 13px;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .slogan {
+                font-size: 13px;
+            }
+
+            .services {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .service {
+                font-size: 13px;
+                padding: 14px 7px;
+            }
+
+            .phone {
+                font-size: 18px;
+            }
+
+            .btn {
+                min-width: 115px;
+                padding: 9px 13px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+    <!-- HEADER -->
+    <header>
+        <div class="container">
 
-<header class="header">
+            <img
+                class="logo"
+                src="file_00000000c2d88246a4f7ab690704da23.png"
+                alt="لوگوی املاک دانش"
+            >
 
-<img class="logo"
-src="file_00000000c2d88246a4f7ab690704da23.png"
-alt="لوگوی املاک دانش">
+            <h1>املاک دانش</h1>
 
-<h1>املاک دانش</h1>
+            <div class="subtitle">
+                خرید و فروش • رهن و اجاره • مشاوره املاک
+            </div>
 
-<p>همراه مطمئن شما در خدمات و معاملات ملکی</p>
+            <div class="slogan">
+                «انسانیت بالاترین هنر، زیباترین صفت و عالی ترین عبادت است»
+            </div>
 
-</header>
+        </div>
+    </header>
 
-<section class="quote">
 
-<strong>
-«انسانیت بالاترین هنر، زیباترین صفت و عالی‌ترین عبادت است.»
-</strong>
+    <main class="container">
 
-</section>
+        <!-- ABOUT -->
+        <section>
+            <div class="about">
+                <p>
+                    املاک دانش با کادری مجرب و متعهد،
+                    با بهترین و مناسب‌ترین و نازل‌ترین فایل‌ها
+                    در خدمت‌رسانی به شما عزیزان انجام وظیفه می‌کند.
+                </p>
+            </div>
+        </section>
 
-<section class="section">
 
-<h2 class="title">🏢 خدمات املاک دانش</h2>
+        <!-- SERVICES -->
+        <section>
 
-<div class="services">
+            <h2 class="section-title">خدمات ما</h2>
 
-<div class="service">🏠 خرید و فروش</div>
-<div class="service">🔑 رهن و اجاره</div>
-<div class="service">🏗️ مشارکت در ساخت</div>
-<div class="service">📋 کارشناسی ملک</div>
-<div class="service">💬 مشاوره تخصصی</div>
-<div class="service">🤝 سایر خدمات ملکی</div>
+            <div class="services">
 
-</div>
+                <div class="service">
+                    <span class="service-icon">🏠</span>
+                    خرید و فروش ملک
+                </div>
 
-</section>
+                <div class="service">
+                    <span class="service-icon">🔑</span>
+                    رهن و اجاره
+                </div>
 
-<section class="section">
+                <div class="service">
+                    <span class="service-icon">🏗️</span>
+                    مشارکت در ساخت
+                </div>
 
-<h2 class="title">📞 تماس با ما</h2>
+                <div class="service">
+                    <span class="service-icon">📋</span>
+                    کارشناسی
+                </div>
 
-<div class="contact">
-<span>مهندس دانش</span>
-<a href="tel:09357766375">09357766375</a>
-</div>
+                <div class="service">
+                    <span class="service-icon">💬</span>
+                    مشاوره
+                </div>
 
-<div class="contact">
-<span>دادوئی‌نژاد</span>
-<a href="tel:09117692916">09117692916</a>
-</div>
+                <div class="service">
+                    <span class="service-icon">🏢</span>
+                    کلیه خدمات ملکی
+                </div>
 
-<div class="buttons">
+            </div>
 
-<a class="btn gold" href="tel:09357766375">
-📞 تماس با مهندس دانش
-</a>
+        </section>
 
-<a class="btn" href="tel:09117692916">
-📞 تماس با دادوئی‌نژاد
-</a>
 
-</div>
+        <!-- CONTACT -->
+        <section>
 
-</section>
+            <h2 class="section-title">تماس با ما</h2>
 
-<section class="section">
+            <div class="contact-box">
 
-<h2 class="title">📍 آدرس دفتر</h2>
+                <!-- Engineer Danesh -->
+                <div class="person">
 
-<div class="address">
-قائم‌شهر، خیابان بابل، تلار ۱۷، نبش اخوان ۳
-</div>
+                    <div class="person-name">
+                        مهندس دانش
+                    </div>
 
-<a class="btn gold"
-href="https://www.google.com/maps/place/36.465085,+52.849239/@36.4650633,52.8492795,21z/data=!4m4!3m3!8m2!3d36.4650847!4d52.8492393"
-target="_blank">
+                    <div class="phone">
+                        09357766375
+                    </div>
 
-📍 مسیریابی در Google Maps
+                    <div class="buttons">
 
-</a>
+                        <a
+                            class="btn call-btn"
+                            href="tel:09357766375"
+                        >
+                            📞 تماس
+                        </a>
 
-</section>
+                        <a
+                            class="btn whatsapp-btn"
+                            href="https://wa.me/989357766375"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            💬 واتساپ
+                        </a>
 
-<section class="section">
+                    </div>
 
-<h2 class="title">🕐 ساعات کاری</h2>
+                </div>
 
-<div class="hours">
-<span>صبح</span>
-<strong>۸:۰۰ تا ۱۳:۰۰</strong>
-</div>
 
-<div class="hours">
-<span>عصر</span>
-<strong>۱۶:۰۰ تا ۲۰:۰۰</strong>
-</div>
+                <!-- Dadoei Nejad -->
+                <div class="person">
 
-</section>
+                    <div class="person-name">
+                        دادوئی‌نژاد
+                    </div>
 
-<section class="section instagram">
+                    <div class="phone">
+                        09117692916
+                    </div>
 
-<h2 class="title">📸 اینستاگرام</h2>
+                    <div class="buttons">
 
-<a href="https://instagram.com/amlakdaneshh"
-target="_blank">
+                        <a
+                            class="btn call-btn"
+                            href="tel:09117692916"
+                        >
+                            📞 تماس
+                        </a>
 
-@amlakdaneshh
+                        <a
+                            class="btn whatsapp-btn"
+                            href="https://wa.me/989117692916"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            💬 واتساپ
+                        </a>
 
-</a>
+                    </div>
 
-</section>
+                </div>
 
-<div class="footer">
+            </div>
 
-<strong>املاک دانش</strong>
+        </section>
 
-<br>
 
-با کادری مجرب و متعهد، با بهترین و مناسب‌ترین فایل‌ها در خدمت شما عزیزان هستیم.
+        <!-- ADDRESS -->
+        <section>
 
-</div>
+            <h2 class="section-title">آدرس دفتر</h2>
 
-</div>
+            <div class="info-box">
+
+                <div class="info-title">
+                    📍 آدرس
+                </div>
+
+                <div class="info-text">
+                    قائم‌شهر، خیابان بابل، تلار ۱۷
+                    <br>
+                    نبش اخوان ۳
+                </div>
+
+                <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/place/36.465085,+52.849239/@36.4650633,52.8492795,21z/data=!4m4!3m3!8m2!3d36.4650847!4d52.8492393"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    🗺️ مسیریابی در گوگل مپ
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOURS -->
+        <section>
+
+            <h2 class="section-title">ساعات کاری</h2>
+
+            <div class="hours">
+
+                <strong>شنبه تا پنجشنبه</strong>
+
+                <br>
+
+                ۸ صبح الی ۱۳ ظهر
+
+                <br>
+
+                ۱۶ عصر الی ۲۰ شب
+
+            </div>
+
+        </section>
+
+
+        <!-- INSTAGRAM -->
+        <section>
+
+            <h2 class="section-title">اینستاگرام</h2>
+
+            <div class="instagram-box">
+
+                <a
+                    class="instagram-link"
+                    href="https://instagram.com/amlakdaneshh"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <svg
+                        class="instagram-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="5"
+                            ry="5"
+                        ></rect>
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        ></circle>
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1"
+                            fill="currentColor"
+                            stroke="none"
+                        ></circle>
+
+                    </svg>
+
+                    <span>@amlakdaneshh</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <span>املاک دانش</span>
+
+        <br>
+
+        قائم‌شهر
+
+        <br>
+
+        تمامی حقوق محفوظ است © 2026
+
+    </footer>
 
 </body>
-  </html>
+    </html>
